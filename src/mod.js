@@ -10,7 +10,7 @@ class Mod
 		const database = container.resolve("DatabaseServer").getTables();
 		const jsonUtil = container.resolve("JsonUtil");
 		const core = container.resolve("JustNUCore");
-		const modDb = `user/mods/zAdditionalGear-TanModule/db/`;
+		const modDb = `user/mods/zAdditionalGear-TanModule-Misc/db/`;
 		const config = require("../config/config.json");
 		const itemConfig = require("../config/itemConfig.json");
 		const itemData = require("../db/items/itemData.json");
