@@ -1,0 +1,12 @@
+{
+    "name": "AdditionalGear - Tan Module, Misc.",
+    "author": "JustNU",
+    "version": "1.0.0",
+    "license": "MIT",
+    "main": "src/mod.js",
+	"akiVersion": "3.4.*",
+	"isBundleMod": true,
+	"dependencies": {
+        "A_JustNUCore": "1.0.0"
+    }
+}

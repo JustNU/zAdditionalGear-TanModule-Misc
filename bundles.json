@@ -1,0 +1,44 @@
+{
+    "manifest": [
+        {
+            "key": "AddGearTan/Facecover/CFbalaclava.bundle",
+            "dependencyKeys": [
+                "shaders",
+                "cubemaps",
+				"assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "AddGearTan/Facecover/halfmask_textures.bundle",
+            "dependencyKeys": [
+				"shaders",
+				"cubemaps"
+			]
+        },
+        {
+            "key": "AddGearTan/Facecover/halfmask.bundle",
+            "dependencyKeys": [
+                "shaders",
+                "cubemaps",
+				"AddGearTan/Facecover/halfmask_textures.bundle",
+				"assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "AddGearTan/Facecover/momex.bundle",
+            "dependencyKeys": [
+                "shaders",
+                "cubemaps",
+				"assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "AddGearTan/Facecover/shemaghV1.bundle",
+            "dependencyKeys": [
+                "shaders",
+                "cubemaps",
+				"assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        }
+    ]
+}
