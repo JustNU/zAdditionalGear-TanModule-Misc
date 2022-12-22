@@ -46,7 +46,7 @@ class Mod
 				
 				database.templates.quests["59ca264786f77445a80ed044"].conditions.AvailableForFinish[1]._props.counter.conditions[2]._props.equipmentInclusive = [
 					...jsonUtil.clone(thePunisher4Gear),
-					...punisher5Gear
+					...punisher4Gear
 				];
 			}
 		}
