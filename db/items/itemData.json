@@ -2,21 +2,21 @@
 	"AddGearTan_CFBalaclava": {
 		"BaseItemID": "5ab8f39486f7745cd93a1cca",
 		"BundlePath": "AddGearTan/Facecover/CFbalaclava.bundle",
-		"LootWeigthMult": 0.5
+		"LootWeigthMult": 0.25
 	},
 	"AddGearTan_HalfMask": {
 		"BaseItemID": "572b7fa524597762b747ce82",
 		"BundlePath": "AddGearTan/Facecover/halfmask.bundle",
-		"LootWeigthMult": 0.5
+		"LootWeigthMult": 0.25
 	},
 	"AddGearTan_MomexBalaclava": {
 		"BaseItemID": "5b432f3d5acfc4704b4a1dfb",
 		"BundlePath": "AddGearTan/Facecover/momex.bundle",
-		"LootWeigthMult": 0.5
+		"LootWeigthMult": 0.25
 	},
 	"AddGearTan_ShemaghVer1": {
 		"BaseItemID": "5ab8f85d86f7745cd93a1cf5",
 		"BundlePath": "AddGearTan/Facecover/shemaghV1.bundle",
-		"LootWeigthMult": 0.5
+		"LootWeigthMult": 0.25
 	}
 }
