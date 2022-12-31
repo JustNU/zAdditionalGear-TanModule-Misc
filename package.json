@@ -6,7 +6,7 @@
     "main": "src/mod.js",
 	"akiVersion": "3.4.*",
 	"isBundleMod": true,
-	"dependencies": {
+	"modDependencies": {
         "A_JustNUCore": "1.0.1"
     }
 }
