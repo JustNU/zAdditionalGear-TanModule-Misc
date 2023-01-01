@@ -7,6 +7,6 @@
 	"akiVersion": "3.4.*",
 	"isBundleMod": true,
 	"modDependencies": {
-        "JustNUCore": "1.0.1"
+        "JustNUCore": "1.0.2"
     }
 }
