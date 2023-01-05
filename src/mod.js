@@ -19,7 +19,7 @@ class Mod
 		for (const categoryId in itemConfig) {
 			for (const itemId in itemConfig[categoryId]) {
 				if (itemConfig[categoryId][itemId]) {
-					core.addItemRetexture(modDb, itemId, itemData[itemId].BaseItemID, itemData[itemId].BundlePath, config.EnableTradeOffers, config.AddToBots, itemData[itemId].LootWeigthMult);
+					core.addItemRetexture(itemId, itemData[itemId].BaseItemID, itemData[itemId].BundlePath, config.EnableTradeOffers, config.AddToBots, itemData[itemId].LootWeigthMult);
 				}
 			}
 		}
