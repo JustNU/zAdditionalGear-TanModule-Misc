@@ -1,21 +1,21 @@
 {
 	"AddGearTan_CFBalaclava": {
-        "Name": "Cold Fear Infrared balaclava (Desert Tan)",
+        "Name": "Cold Fear Infrared balaclava (Tan)",
 		"ShortName": "CF",
 		"Description": "A quality balaclava with a special technological material, which ensures maximum warmth in the most severe frosts. But we do not need it for warmth. We need it to look tactical."
     },
 	"AddGearTan_HalfMask": {
-        "Name": "Lower half-mask (Desert Tan)",
+        "Name": "Lower half-mask (Tan)",
 		"ShortName": "Half-mask",
 		"Description": "A piece of cloth, typically a bandana, covering the face from nose and below, is the most typical attribute of a street gang member."
     },
 	"AddGearTan_MomexBalaclava": {
-        "Name": "Momex balaclava (Desert Tan)",
+        "Name": "Momex balaclava (Tan)",
 		"ShortName": "Momex",
 		"Description": "A tactical balaclava with a single hole for eyes."
     },
 	"AddGearTan_ShemaghVer1": {
-        "Name": "Shemagh (Desert Tan, ver. 1)",
+        "Name": "Shemagh (Tan, ver. 1)",
 		"ShortName": "Shemagh",
 		"Description": "A favorite headpiece of PMCs around the globe."
     }
