@@ -11,11 +11,13 @@ class Mod
 		const jsonUtil = container.resolve("JsonUtil");
 		const core = container.resolve("JustNUCore");
 		const VFS = container.resolve("VFS");
+		const modLoader = container.resolve("PreAkiModLoader");
 		const modDb = `user/mods/zAdditionalGear-TanModule-Misc/db/`;
 		const config = require("../config/config.json");
 		const itemConfig = require("../config/itemConfig.json");
 		const itemData = require("../db/items/itemData.json");
-		const enLocale = jsonUtil.deserialize(VFS.readFile(`${modDb}/locales/en.json`));
+		const enLocale = require(`../db/locales/en.json`);
+		const modPath = modLoader.getModPath("AdditionalGear - Vanilla Extended");
 		
 		//add retextures
 		for (const categoryId in itemConfig) {
@@ -25,30 +27,24 @@ class Mod
 					
 					// en placeholder
 					if (enLocale[itemId]) {
-						if (enLocale[itemId].Name)
-							database.locales.global[localeID][`${itemId} Name`] = enLocale[itemId].Name;
-						if (enLocale[itemId].ShortName)
-							database.locales.global[localeID][`${itemId} ShortName`] = enLocale[itemId].ShortName;
-						if (enLocale[itemId].Description)
-							database.locales.global[localeID][`${itemId} Description`] = enLocale[itemId].Description;
+						for (const localeItemEntry in enLocale[itemId]) {
+							database.locales.global[localeID][`${itemId} ${localeItemEntry}`] = enLocale[itemId][localeItemEntry];
+						}
 					}
 					// actual locale
-					if (VFS.exists(`${modDb}/locales/${localeID}.json`) && localeID != "en") {
-						const actualLocale = jsonUtil.deserialize(VFS.readFile(`${modDb}/locales/${localeID}.json`));
+					if (VFS.exists(`${modPath}locales/${localeID}.json`) && localeID != "en") {
+						const actualLocale = require(`../locales/${localeID}.json`);
 
 						if (actualLocale[itemId]) {
-							if (actualLocale[itemId].Name)
-								database.locales.global[localeID][`${itemId} Name`] = actualLocale[itemId].Name;
-							if (actualLocale[itemId].ShortName)
-								database.locales.global[localeID][`${itemId} ShortName`] = actualLocale[itemId].ShortName;
-							if (actualLocale[itemId].Description)
-								database.locales.global[localeID][`${itemId} Description`] = actualLocale[itemId].Description;
+							for (const localeItemEntry in actualLocale[itemId]) {
+								database.locales.global[localeID][`${itemId} ${localeItemEntry}`] = actualLocale[itemId][localeItemEntry];
+							}
 						}
 					}
 					
 					// replace some default locale
-					if (VFS.exists(`${modDb}/localesReplace/${localeID}.json`)) {
-						const replaceLocale = jsonUtil.deserialize(VFS.readFile(`${modDb}/localesReplace/en.json`));
+					if (VFS.exists(`${modPath}localesReplace/${localeID}.json`)) {
+						const replaceLocale = require(`../localesReplace/${localeID}.json`);
 						
 						for (const localeItem in replaceLocale) {
 							for (const localeItemEntry in replaceLocale[localeItem]) {
