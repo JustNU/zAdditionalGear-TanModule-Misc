@@ -1,7 +1,7 @@
 {
     "name": "AdditionalGear - Tan Module, Misc.",
     "author": "JustNU",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": "Unlicense",
     "main": "src/mod.js",
 	"akiVersion": "3.5.*",
