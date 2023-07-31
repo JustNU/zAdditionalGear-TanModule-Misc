@@ -4,7 +4,7 @@
     "version": "1.0.2",
     "license": "Unlicense",
     "main": "src/mod.js",
-	"akiVersion": "3.5.*",
+	"akiVersion": "3.6.*",
 	"isBundleMod": true,
 	"modDependencies": {
         "JustNUCore": "1.1.0"
