@@ -31,8 +31,8 @@ class Mod
 						}
 					}
 					// actual locale
-					if (VFS.exists(`${modPath}locales\\${localeID}.json`) && localeID != "en") {
-						const actualLocale = require(`../locales/${localeID}.json`);
+					if (VFS.exists(`${modPath}\\db\\locales\\${localeID}.json`) && localeID != "en") {
+						const actualLocale = require(`${modPath}\\db\\locales\\${localeID}.json`);
 
 						if (actualLocale[itemId]) {
 							for (const localeItemEntry in actualLocale[itemId]) {
@@ -42,8 +42,8 @@ class Mod
 					}
 					
 					// replace some default locale
-					if (VFS.exists(`${modPath}localesReplace\\${localeID}.json`)) {
-						const replaceLocale = require(`../localesReplace/${localeID}.json`);
+					if (VFS.exists(`${modPath}\\db\\localesReplace\\${localeID}.json`)) {
+						const replaceLocale = require(`${modPath}\\db\\localesReplace\\${localeID}.json`);
 						
 						for (const localeItem in replaceLocale) {
 							for (const localeItemEntry in replaceLocale[localeItem]) {
