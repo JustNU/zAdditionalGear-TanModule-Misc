@@ -11,13 +11,12 @@ class Mod
 		const jsonUtil = container.resolve("JsonUtil");
 		const core = container.resolve("JustNUCore");
 		const VFS = container.resolve("VFS");
-		const modLoader = container.resolve("PreAkiModLoader");
 		const modDb = `user/mods/zAdditionalGear-TanModule-Misc/db/`;
 		const config = require("../config/config.json");
 		const itemConfig = require("../config/itemConfig.json");
 		const itemData = require("../db/items/itemData.json");
 		const enLocale = require(`../db/locales/en.json`);
-		const modPath = modLoader.getModPath("AdditionalGear - Vanilla Extended");
+		const modPath = __dirname.split("\\").slice(0, -1).join("\\");
 		
 		//add retextures
 		for (const categoryId in itemConfig) {
@@ -32,7 +31,7 @@ class Mod
 						}
 					}
 					// actual locale
-					if (VFS.exists(`${modPath}locales/${localeID}.json`) && localeID != "en") {
+					if (VFS.exists(`${modPath}locales\\${localeID}.json`) && localeID != "en") {
 						const actualLocale = require(`../locales/${localeID}.json`);
 
 						if (actualLocale[itemId]) {
@@ -43,7 +42,7 @@ class Mod
 					}
 					
 					// replace some default locale
-					if (VFS.exists(`${modPath}localesReplace/${localeID}.json`)) {
+					if (VFS.exists(`${modPath}localesReplace\\${localeID}.json`)) {
 						const replaceLocale = require(`../localesReplace/${localeID}.json`);
 						
 						for (const localeItem in replaceLocale) {
